@@ -1,0 +1,19 @@
+{
+  "name": "mocha_algorithm_challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebdil/mocha_algorithm_challenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nebdil/mocha_algorithm_challenges/issues"
+  },
+  "homepage": "https://github.com/nebdil/mocha_algorithm_challenges#readme"
+}
