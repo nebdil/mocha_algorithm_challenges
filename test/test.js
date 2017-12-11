@@ -39,4 +39,13 @@ describe('Algorithms', function() {
     });
   });
 
+  describe('SimpleAdding', function() {
+    it('should return 78', function() {
+      assert.equal('78', algo.SimpleAdding('12'));
+    });
+    it('should return 9870', function() {
+      assert.equal('9870', algo.SimpleAdding('140'));
+    });
+  });
+
 });

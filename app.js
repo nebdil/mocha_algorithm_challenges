@@ -24,27 +24,26 @@ algo.FirstReverse = function(str) {
 
 //Using the JavaScript language, have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm. Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string.
 algo.LetterChanges = function(str) {
-  let arr = str.split('');
-  for(let i = 0; i < arr.length; i++) {
-    if(arr[i].match(/^[A-Za-z]+$/)) {
-      arr[i].replace((l) => {
-        console.log('in replace')
-
-        let modified = '';
-        let alphabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
-        for (let j = 0; j < alphabet.length; j++) {
-          if (l === alphabet[j]) {
-            modified = alphabet[j+1]
-          }
-        }
-        if(modified === 'a' || modified === 'e' || modified === 'i' || modified === 'o' || modified === 'u') {
-          modified.uppercase()
-        }
-        return modified;
-      })
+  let replaced = str.replace(/[a-z]/gi, function(l) {
+    if (l === 'z' || l === 'Z') {
+      return 'a';
+    } else {
+      return String.fromCharCode(l.charCodeAt() + 1);
     }
+  });
+  let uppercased = replaced.replace(/a|e|i|o|u/gi, function(l) {
+    return l.toUpperCase();
+  });
+  return uppercased;
+}
+
+// Using the JavaScript language, have the function SimpleAdding(num) add up all the numbers from 1 to num. For example: if the input is 4 then your program should return 10 because 1 + 2 + 3 + 4 = 10. For the test cases, the parameter num will be any number from 1 to 1000.
+algo.SimpleAdding = function(num) {
+  let sum = 0;
+  for (let i = 0; i <= num; i++) {
+    sum += i
   }
-  return arr.join('');
+  return sum;
 }
 
 module.exports = algo;
