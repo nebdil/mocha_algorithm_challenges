@@ -3,6 +3,15 @@ let assert = require('assert');
 
 describe('Algorithms', function() {
 
+  describe('SimpleSymbols', function() {
+    it('should return true', function() {
+      assert.equal(true, algo.SimpleSymbols('+d+=3=+s+'));
+    });
+    it('should return false', function() {
+      assert.equal(false, algo.SimpleSymbols('f++d+'));
+    });
+  });
+
   describe('Longest word in a string', function() {
     it('should return the first longest word in a string, ignores special characters', function() {
       assert.equal('time', algo.LongestWord('fun&!! time'));
@@ -45,6 +54,15 @@ describe('Algorithms', function() {
     });
     it('should return 9870', function() {
       assert.equal('9870', algo.SimpleAdding('140'));
+    });
+  });
+
+  describe('LetterCapitalize', function() {
+    it('should return Hello World', function() {
+      assert.equal('Hello World', algo.LetterCapitalize('hello world'));
+    });
+    it('should return I Ran There', function() {
+      assert.equal('I Ran There', algo.LetterCapitalize('i ran there'));
     });
   });
 

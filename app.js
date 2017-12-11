@@ -1,5 +1,10 @@
 let algo = {};
 
+// Using the JavaScript language, have the function SimpleSymbols(str) take the str parameter being passed and determine if it is an acceptable sequence by either returning the string true or false. The str parameter will be composed of + and = symbols with several letters between them (ie. ++d+===+c++==a) and for the string to be true each letter must be surrounded by a + symbol. So the string to the left would be false. The string will not be empty and will have at least one letter.
+algo.SimpleSymbols = function(str) {
+  
+}
+
 // Using the JavaScript language, have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty.
 algo.LongestWord = function(sen) {
   let longest = sen.match(/[\w]+/g).sort(function(a, b) {
@@ -44,6 +49,14 @@ algo.SimpleAdding = function(num) {
     sum += i
   }
   return sum;
+}
+
+// Using the JavaScript language, have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first letter of each word. Words will be separated by only one space.
+algo.LetterCapitalize = function(str) {
+  let replaced = str.replace(/\b[a-z]/gi, function(l) {
+    return l.toUpperCase();
+  });
+  return replaced;
 }
 
 module.exports = algo;
