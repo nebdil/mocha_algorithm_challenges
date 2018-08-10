@@ -3,6 +3,27 @@ let assert = require('assert');
 
 describe('Algorithms', function() {
 
+  describe('CheckNums', function() {
+    it('should return true', function() {
+      assert.equal(true, algo.CheckNums('+d+=3=+s+'));
+    });
+    it('should return false', function() {
+      assert.equal(false, algo.CheckNums('f++d+'));
+    });
+  })
+
+
+
+  Input:3 & num2 = 122
+
+  Output:"true"
+
+  Input:67 & num2 = 67
+
+  Output:"-1"
+
+
+
   describe('SimpleSymbols', function() {
     it('should return true', function() {
       assert.equal(true, algo.SimpleSymbols('+d+=3=+s+'));
